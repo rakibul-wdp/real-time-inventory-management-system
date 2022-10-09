@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import AllRoutes from "./Routes/AllRoutes";
+import Navbar from "./components/Navbar/Navbar";
+import socket from "socket.io-client";
 
 function App() {
+  useEffect(() => {
+    const io = socket('https://digital-crew-assignment-a8ld.vercel.app');
+    io.on('connect', () => {
+      console.log('Connected to server');
+    })
+
+    io.on('product_create', (data) => {
+      console.log(data)
+      const { title } = data
+      alert(`New Product Created Title: ${title}`)
+    })
+
+    io.on('product_delete', (data) => {
+      console.log(data)
+      const { title } = data
+      alert(`One Product Deleted Title: ${title}`)
+    })
+
+    io.on('disconnect', () => {
+      console.log('Disconnected from server');
+    })
+
+    return () => io.disconnect();
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <AllRoutes />
     </div>
   );
 }
