@@ -1,1 +1,7 @@
-# Real-Time Inventory Management System [Live]()
+# Real-Time Inventory Management System [Live](https://inventory-management-by-rakibul-wdp.netlify.app)
+### Endpoints: [Server Side Live Link](https://digital-crew-assignment-a8ld.vercel.app)
+- a. GET /inventory - http://localhost:8000/inventory or [Live Server](https://digital-crew-assignment-a8ld.vercel.app/inventory)
+- b. GET /inventory/:id - http://localhost:8000/inventory/:id or [Live Server](https://digital-crew-assignment-a8ld.vercel.app/inventory/:id)
+- c. POST /inventory - http://localhost:8000/inventory or [Live Server](https://digital-crew-assignment-a8ld.vercel.app/inventory)
+- d. PUT /inventory/:id - http://localhost:8000/inventory/:id or [Live Server](https://digital-crew-assignment-a8ld.vercel.app/inventory/:id)
+- e. DELETE /inventory/:id - http://localhost:8000/inventory/:id or [Live Server](https://digital-crew-assignment-a8ld.vercel.app/inventory/:id)
