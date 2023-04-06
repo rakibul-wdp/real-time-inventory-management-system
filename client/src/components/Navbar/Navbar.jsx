@@ -2,21 +2,10 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { postInventoryData } from '../Redux/action';
+import { postInventoryData } from '../../Redux/action';
 import { useNavigate } from 'react-router-dom';
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalCloseButton,
-  ModalBody,
-  ModalFooter,
-  FormControl,
-  useDisclosure,
-  Input,
-  Button
-} from '@chakra-ui/react';
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalBody, ModalFooter, FormControl, useDisclosure, Input, Button } from "@chakra-ui/react";
+import { AiOutlinePlusCircle } from "react-icons/ai"
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -60,19 +49,11 @@ export default function Navbar() {
   return (
     <div>
       <nav>
-        <div className="logo" onClick={() => {
-          navigate(`/`);
-        }}>
-          <img
-            src="https://media.licdn.com/dms/image/D4D0BAQHzKc_-m5KmEg/company-logo_100_100/0/1663927015575?e=2147483647&v=beta&t=hF_r2Byh6f9jzLtQ6Vc6-_PlljM9_9DJrjGJ2YABLus"
-            alt="Logo"
-          />
-        </div>
         <h1 className="nav-title" onClick={() => { navigate(`/`); }}>Inventory System</h1>
 
         <div>
           <button id="add-product-btn" onClick={onOpen}>
-            ADD PRODUCT
+            <AiOutlinePlusCircle style={{ display: "inline", fontSize: "20px" }} /> <span>ADD PRODUCT</span>
           </button>
         </div>
       </nav>

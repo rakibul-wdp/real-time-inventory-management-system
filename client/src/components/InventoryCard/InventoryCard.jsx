@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import "./InventoryCard.css"
 import { FaEdit, FaTrash } from "react-icons/fa";
 import axios from 'axios'
-import { fetchInventoryData } from '../Redux/action';
+import { fetchInventoryData } from '../../Redux/action';
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { deleteInventoryData } from '../Redux/action';
+import { deleteInventoryData } from '../../Redux/action';
 
 export default function InventoryCard() {
   const navigate = useNavigate();

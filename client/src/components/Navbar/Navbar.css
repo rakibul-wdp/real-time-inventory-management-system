@@ -2,9 +2,8 @@ nav {
   display: flex;
   align-items: center;
   height: 64px;
-  background-color: #ccc;
   justify-content: space-between;
-  padding: 0 5%;
+  padding: 3% 6% 6% 7%;
 }
 
 .logo > img {
